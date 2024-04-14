@@ -6,6 +6,7 @@
     ],
     "plugins": [
       ["@semantic-release/commit-analyzer", {
+        "preset": "conventionalcommits",
         "releaseRules": [
           {"type": "feat", "release": "minor", "scope": "s3-browser"},
           {"type": "fix", "release": "patch", "scope": "s3-browser"},
@@ -39,6 +40,7 @@
         }
       }],
       ["@semantic-release/release-notes-generator", {
+        "preset": "conventionalcommits",
         "presetConfig": {
             "types": [
                 {
