@@ -2,8 +2,7 @@
     "repositoryUrl": "https://github.com/gary-Shen/release-test.git",
     "tagFormat": "s3-browser@v${version}",
     "branches": [
-      "main",
-      { "name": "s3-browser-test", "prerelease": "test" }
+      "main"
     ],
     "plugins": [
       ["@semantic-release/commit-analyzer", {
