@@ -14,14 +14,7 @@
           {"type": "revert", "release": "patch", "scope": "s3-browser"},
           {"type": "docs", "release": "patch", "scope": "s3-browser"},
           {"type": "style", "release": "patch", "scope": "s3-browser"},
-          {"type": "refactor", "release": "patch", "scope": "s3-browser"},
-          {"type": "feat", "release": false },
-          {"type": "fix", "release": false },
-          {"type": "perf", "release": false },
-          {"type": "revert", "release": false },
-          {"type": "docs", "release": false },
-          {"type": "style", "release": false },
-          {"type": "refactor", "release": false }
+          {"type": "refactor", "release": "patch", "scope": "s3-browser"}
         ]
       }],
       ["@semantic-release/release-notes-generator", {
