@@ -1,4 +1,5 @@
 {
+    "repositoryUrl": "https://github.com/gary-Shen/release-test.git",
     "tagFormat": "s3-browser@v${version}",
     "branches": [
       "main",
