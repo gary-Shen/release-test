@@ -36,5 +36,5 @@ jobs:
           node-version: 20.8.1
       - name: Release
         run: |
-            npm i -g semantic-release @semantic-release/github
+            npm i -g semantic-release @semantic-release/github conventional-changelog-conventionalcommits
             npx semantic-release
