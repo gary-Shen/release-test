@@ -45,10 +45,8 @@
             "release": "patch",
             "scope": "s3-browser"
           },
-          {
-            "release": false,
-            "scope": "!s3-browser"
-          }
+          { "type": "*", "scope": "!s3", "release": false },
+          { "type": "*", "scope": "!s3-browser", "release": false }
         ]
       }
     ],
