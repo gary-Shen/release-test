@@ -1,48 +1,87 @@
 {
-    "repositoryUrl": "https://github.com/gary-Shen/release-test.git",
-    "tagFormat": "s3-browser@v${version}",
-    "branches": [
-      "main"
-    ],
-    "plugins": [
-      ["@semantic-release/commit-analyzer", {
+  "repositoryUrl": "https://github.com/gary-Shen/release-test.git",
+  "tagFormat": "s3-browser@v${version}",
+  "branches": [
+    "main"
+  ],
+  "plugins": [
+    [
+      "@semantic-release/commit-analyzer",
+      {
         "preset": "angular",
         "releaseRules": [
-          {"type": "feat", "release": "minor", "scope": "s3-browser"},
-          {"type": "fix", "release": "patch", "scope": "s3-browser"},
-          {"type": "perf", "release": "patch", "scope": "s3-browser"},
-          {"type": "revert", "release": "patch", "scope": "s3-browser"},
-          {"type": "docs", "release": "patch", "scope": "s3-browser"},
-          {"type": "style", "release": "patch", "scope": "s3-browser"},
-          {"type": "refactor", "release": "patch", "scope": "s3-browser"}
+          {
+            "type": "feat",
+            "release": "minor",
+            "scope": "s3-browser"
+          },
+          {
+            "type": "fix",
+            "release": "patch",
+            "scope": "s3-browser"
+          },
+          {
+            "type": "perf",
+            "release": "patch",
+            "scope": "s3-browser"
+          },
+          {
+            "type": "revert",
+            "release": "patch",
+            "scope": "s3-browser"
+          },
+          {
+            "type": "docs",
+            "release": "patch",
+            "scope": "s3-browser"
+          },
+          {
+            "type": "style",
+            "release": "patch",
+            "scope": "s3-browser"
+          },
+          {
+            "type": "refactor",
+            "release": "patch",
+            "scope": "s3-browser"
+          },
+          {
+            "release": false,
+            "scope": "*"
+          }
         ]
-      }],
-      ["@semantic-release/release-notes-generator", {
+      }
+    ],
+    [
+      "@semantic-release/release-notes-generator",
+      {
         "preset": "angular",
         "presetConfig": {
-            "types": [
-                {
-                    "type": "fix",
-                    "scope": "s3-browser",
-                    "hidden": false,
-                    "section": "Bug fixes"
-                },
-                {
-                    "type": "feat",
-                    "scope": "s3-browser",
-                    "hidden": false,
-                    "section": "Features"
-                },
-                {
-                    "type": "refactor",
-                    "scope": "s3-browser",
-                    "hidden": false,
-                    "section": "Code Refactoring"
-                }
-            ]
+          "types": [
+            {
+              "type": "fix",
+              "scope": "s3-browser",
+              "hidden": false,
+              "section": "Bug fixes"
+            },
+            {
+              "type": "feat",
+              "scope": "s3-browser",
+              "hidden": false,
+              "section": "Features"
+            },
+            {
+              "type": "refactor",
+              "scope": "s3-browser",
+              "hidden": false,
+              "section": "Code Refactoring"
+            }
+          ]
         }
-      }],
-      ["@semantic-release/github"]
+      }
+    ],
+    [
+      "@semantic-release/github"
     ]
-  }
-  
+  ]
+}
