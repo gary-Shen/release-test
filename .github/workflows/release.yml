@@ -1,6 +1,8 @@
 # This is a basic workflow to help you get started with Actions
 
 name: RELEASE
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 permissions:
     contents: write
