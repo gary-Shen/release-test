@@ -14,4 +14,3 @@ a test repo for semantic release
 ## Update
 
 - Ignored commits without scope. see [.releaserc.json](https://github.com/gary-Shen/release-test/blob/main/.releaserc.json#L10)
-- bla bla bla
