@@ -8,11 +8,6 @@ module.exports = {
       "@semantic-release/commit-analyzer",
       {
         preset: "angular",
-        parserOpts: {
-          noteKeywords: ['BREAKING CHANGE', 'BREAKING CHANGES'],
-          headerPattern: /^(\w*)(\((.*)\))?: (.*)$/,
-          headerCorrespondence: ['type', 'scope', 'subject'],
-        },
         releaseRules: [
           { type: 'feat', scope: 's3-browser', release: 'minor' },
           { type: 'fix', scope: 's3-browser', release: 'patch' },
@@ -21,7 +16,7 @@ module.exports = {
           { type: 'docs', scope: 's3-browser', release: 'patch' },
           { type: 'style', scope: 's3-browser', release: 'patch' },
           { type: 'refactor', scope: 's3-browser', release: 'patch' },
-          { release: false }
+          { release: false, scope: '!s3-browser'}
         ]
       }
     ],
