@@ -2,9 +2,6 @@
 
 name: RELEASE
 
-env:
-  GH_TOKEN: ${{ secrets.GH_TOKEN }}
-
 permissions:
     contents: write
 
@@ -36,5 +33,5 @@ jobs:
           node-version: 20.8.1
       - name: Release
         run: |
-            npm i -g semantic-release @semantic-release/github conventional-changelog-conventionalcommits
-            npx semantic-release
+            npm install
+            semantic-release
