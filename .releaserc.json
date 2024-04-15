@@ -68,6 +68,18 @@
               "section": "Code Refactoring"
             },
             {
+              "type": "fix",
+              "scope": "s3-browser",
+              "hidden": false,
+              "section": "Bug fixes"
+            },
+            {
+              "type": "feat",
+              "scope": "s3-browser",
+              "hidden": false,
+              "section": "Features"
+            },
+            {
               "type": "style",
               "scope": "s3-browser",
               "hidden": false,
