@@ -7,13 +7,22 @@ module.exports = {
     [
       "@semantic-release/commit-analyzer",
       {
-        preset: "angular",
-        parserOpts: {
-          noteKeywords: ['BREAKING CHANGE', 'BREAKING CHANGES'],
-          headerPattern: /^(\w*)(?:\((.*)\))?: (.*)$/,
-          headerCorrespondence: ['type', 'scope', 'subject'],
+        // 自定义 analyzeCommits 函数
+        analyzeCommits: ({ commits, logger }) => {
+          let type;
+          const types = ['patch', 'minor', 'major'];
+          commits.forEach(commit => {
+            if (commit.scope === 's3-browser') {
+              const releaseType = types.find(t => commit.type === t);
+              if (releaseType && (!type || types.indexOf(releaseType) > types.indexOf(type))) {
+                type = releaseType;
+              }
+            }
+          });
+          logger.log('Final release type for s3-browser scope: %s', type);
+          return type;
         },
-      }
+      },
     ],
     [
       "@semantic-release/release-notes-generator",
