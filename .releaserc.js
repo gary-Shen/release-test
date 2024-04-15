@@ -5,9 +5,8 @@ module.exports = {
   ],
   plugins: [
     [
-      "@semantic-release/commit-analyzer",
+      "@shlab/commit-analyzer",
       {
-        preset: "angular",
         releaseRules: [
           { type: 'feat', scope: 's3-browser', release: 'minor' },
           { type: 'fix', scope: 's3-browser', release: 'patch' },

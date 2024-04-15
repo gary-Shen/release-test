@@ -1,0 +1,19 @@
+{
+  "name": "release-test",
+  "version": "1.0.0",
+  "description": "a test repo for semantic release",
+  "main": ".releaserc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@shlab/commit-analyzer": "1.0.0",
+    "@semantic-release/github": "^10.0.3",
+    "@semantic-release/release-notes-generator": "^13.0.0",
+    "conventional-changelog-angular": "^7.0.0",
+    "conventional-changelog-conventionalcommits": "^7.0.2",
+    "semantic-release": "^23.0.8"
+  }
+}
