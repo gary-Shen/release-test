@@ -12,6 +12,8 @@ module.exports = {
           let type;
           const types = ['patch', 'minor', 'major'];
           commits.forEach(commit => {
+            console.log(commit.scope)
+            console.log('type', commit.type)
             if (commit.scope === 's3-browser') {
               const releaseType = types.find(t => commit.type === t);
               if (releaseType && (!type || types.indexOf(releaseType) > types.indexOf(type))) {
