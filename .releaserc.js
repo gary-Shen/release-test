@@ -7,24 +7,23 @@ module.exports = {
     [
       "@semantic-release/commit-analyzer",
       {
-        // 自定义 analyzeCommits 函数
-        analyzeCommits: ({ commits, logger }) => {
-          let type;
-          const types = ['patch', 'minor', 'major'];
-          commits.forEach(commit => {
-            console.log(commit.scope)
-            console.log('type', commit.type)
-            if (commit.scope === 's3-browser') {
-              const releaseType = types.find(t => commit.type === t);
-              if (releaseType && (!type || types.indexOf(releaseType) > types.indexOf(type))) {
-                type = releaseType;
-              }
-            }
-          });
-          logger.log('Final release type for s3-browser scope: %s', type);
-          return type;
+        preset: "angular",
+        parserOpts: {
+          noteKeywords: ['BREAKING CHANGE', 'BREAKING CHANGES'],
+          headerPattern: /^(\w*)(\((.*)\))?: (.*)$/,
+          headerCorrespondence: ['type', 'scope', 'subject'],
         },
-      },
+        releaseRules: [
+          { type: 'feat', scope: 's3-browser', release: 'minor' },
+          { type: 'fix', scope: 's3-browser', release: 'patch' },
+          { type: 'perf', scope: 's3-browser', release: 'patch' },
+          { type: 'revert', scope: 's3-browser', release: 'patch' },
+          { type: 'docs', scope: 's3-browser', release: 'patch' },
+          { type: 'style', scope: 's3-browser', release: 'patch' },
+          { type: 'refactor', scope: 's3-browser', release: 'patch' },
+          { release: false }
+        ]
+      }
     ],
     [
       "@semantic-release/release-notes-generator",
