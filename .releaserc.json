@@ -5,7 +5,6 @@
     "main"
   ],
   "plugins": [
-    "./analyzer",
     [
       "@semantic-release/commit-analyzer",
       {
