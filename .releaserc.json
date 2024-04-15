@@ -5,49 +5,12 @@
     "main"
   ],
   "plugins": [
+    "./analyzer",
     [
       "@semantic-release/commit-analyzer",
       {
         "preset": "angular",
-        "releaseRules": [
-          {
-            "type": "feat",
-            "release": "minor",
-            "scope": "s3-browser"
-          },
-          {
-            "type": "fix",
-            "release": "patch",
-            "scope": "s3-browser"
-          },
-          {
-            "type": "perf",
-            "release": "patch",
-            "scope": "s3-browser"
-          },
-          {
-            "type": "revert",
-            "release": "patch",
-            "scope": "s3-browser"
-          },
-          {
-            "type": "docs",
-            "release": "patch",
-            "scope": "s3-browser"
-          },
-          {
-            "type": "style",
-            "release": "patch",
-            "scope": "s3-browser"
-          },
-          {
-            "type": "refactor",
-            "release": "patch",
-            "scope": "s3-browser"
-          },
-          { "type": "*", "scope": "!s3", "release": false },
-          { "type": "*", "scope": "!s3-browser", "release": false }
-        ]
+        "config": "./custom-preset.js"
       }
     ],
     [
