@@ -13,4 +13,5 @@ a test repo for semantic release
 
 ## Update
 
-- Ignored commits without scope. see [.releaserc.json](https://github.com/gary-Shen/release-test/blob/main/.releaserc.json#L10)
+- Release notes filter by scope. see [s3-browser@v1.0.16](https://github.com/gary-Shen/release-test/releases/tag/s3-browser%40v1.0.16)
+- Ignore `fix: something` in release notes.
