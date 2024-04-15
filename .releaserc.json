@@ -10,7 +10,7 @@
       {
         "preset": "conventionalcommits",
         "parserOpts": {
-          "headerPattern": "^(\\w*)(?:\\(([^\\w*.\\-]+)\\))?: (.*)$",
+          "headerPattern": "^(\\w*)\\((\\w*)\\): (.*)$",
           "headerCorrespondence": ["type", "scope", "subject"]
         },
         "releaseRules": [
@@ -61,7 +61,7 @@
       {
         "preset": "conventionalcommits",
         "parserOpts": {
-          "headerPattern": "^(\\w*)(?:\\(([^\\w*.\\-]+)\\))?: (.*)$",
+          "headerPattern": "^(\\w*)\\((\\w*)\\): (.*)$",
           "headerCorrespondence": ["type", "scope", "subject"]
         },
         "presetConfig": {
