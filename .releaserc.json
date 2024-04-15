@@ -9,10 +9,6 @@
       "@semantic-release/commit-analyzer",
       {
         "preset": "conventionalcommits",
-        "parserOpts": {
-          "headerPattern": "^(\\w*)\\((\\w*)\\): (.*)$",
-          "headerCorrespondence": ["type", "scope", "subject"]
-        },
         "releaseRules": [
           {
             "type": "feat",
@@ -48,6 +44,9 @@
             "type": "refactor",
             "release": "patch",
             "scope": "s3-browser"
+          },
+          {
+            "release": false
           }
         ]
       }
@@ -56,24 +55,8 @@
       "@semantic-release/release-notes-generator",
       {
         "preset": "conventionalcommits",
-        "parserOpts": {
-          "headerPattern": "^(\\w*)\\((\\w*)\\): (.*)$",
-          "headerCorrespondence": ["type", "scope", "subject"]
-        },
         "presetConfig": {
           "types": [
-            {
-              "type": "fix",
-              "scope": "s3-browser",
-              "hidden": false,
-              "section": "Bug fixes"
-            },
-            {
-              "type": "feat",
-              "scope": "s3-browser",
-              "hidden": false,
-              "section": "Features"
-            },
             {
               "type": "refactor",
               "scope": "s3-browser",
