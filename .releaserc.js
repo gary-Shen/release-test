@@ -15,7 +15,6 @@ module.exports = {
           { type: 'docs', scope: 's3-browser', release: 'patch' },
           { type: 'style', scope: 's3-browser', release: 'patch' },
           { type: 'refactor', scope: 's3-browser', release: 'patch' },
-          { release: false, scope: '!s3-browser'}
         ]
       }
     ],
