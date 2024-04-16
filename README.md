@@ -8,7 +8,7 @@ a test repo for semantic release
 
 ## Result
 
-- Released a patch version. see [.releaserc.json](https://github.com/gary-Shen/release-test/blob/main/.releaserc.json#L10)
+- Released a patch version. see [.releaserc.js](https://github.com/gary-Shen/release-test/blob/main/.releaserc.js#L10)
 - The content in Release notes is empty. see [v1.0.1](https://github.com/gary-Shen/release-test/releases/tag/s3-browser%40v1.0.1)
 
 ## Update
@@ -17,6 +17,8 @@ a test repo for semantic release
 - Ignore `fix: something` without scope in release notes. see [commit](https://github.com/gary-Shen/release-test/commit/e8b98286952dbf62e0220f647aaaaf917dfa3c74)
 
 ## Solution
+
+The main problem is that the commit-analyzer will use the default release rules if the custom release rules does not have a matched release type.
 
 ```diff
 - if (isUndefined(commitReleaseType)) {
