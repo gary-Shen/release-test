@@ -33,7 +33,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20.8.1
-      - name: Release
+      - name: Release a
         run: |
             npm install
-            ./node_modules/.bin/semantic-release
+            cd packages/a
+            ../../node_modules/.bin/semantic-release
+            cd ../b
+            ../../node_modules/.bin/semantic-release
