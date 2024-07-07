@@ -15,7 +15,7 @@ module.exports = {
           { type: 'docs', scope: 'a', release: 'patch' },
           { type: 'style', scope: 'a', release: 'patch' },
           { type: 'refactor', scope: 'a', release: 'patch' },
-          { breaking: true, scope: 'b', release: "major" },
+          { breaking: true, scope: 'a', release: "major" },
         ],
         parserOpts: {
           noteKeywords: ["BREAKING CHANGE", "BREAKING CHANGES"]
