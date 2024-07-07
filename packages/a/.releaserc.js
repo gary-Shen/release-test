@@ -15,7 +15,11 @@ module.exports = {
           { type: 'docs', scope: 'a', release: 'patch' },
           { type: 'style', scope: 'a', release: 'patch' },
           { type: 'refactor', scope: 'a', release: 'patch' },
-        ]
+          { breaking: true, scope: 'b', release: "major" },
+        ],
+        parserOpts: {
+          noteKeywords: ["BREAKING CHANGE", "BREAKING CHANGES"]
+        }
       }
     ],
     [
@@ -24,6 +28,52 @@ module.exports = {
         preset: "conventionalcommits",
         writerOpts: {
           commitsSort: ["subject", "scope"]
+        },
+        presetConfig: {
+          types: [
+            {
+              type: "refactor",
+              scope: "a",
+              hidden: false,
+              section: "Code Refactoring"
+            },
+            {
+              type: "fix",
+              scope: "a",
+              hidden: false,
+              section: "Bug fixes"
+            },
+            {
+              type: "feat",
+              scope: "a",
+              hidden: false,
+              section: "Features"
+            },
+            {
+              type: "style",
+              scope: "a",
+              hidden: false,
+              section: "Styling"
+            },
+            {
+              type: "docs",
+              scope: "a",
+              hidden: false,
+              section: "Documentation"
+            },
+            {
+              type: "perf",
+              scope: "a",
+              hidden: false,
+              section: "Performance Improvements"
+            },
+            {
+              type: "revert",
+              scope: "a",
+              hidden: false,
+              section: "Reverts"
+            }
+          ]
         }
       }
     ],
